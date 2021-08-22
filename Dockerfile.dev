@@ -1,0 +1,11 @@
+FROM node:alpine
+
+WORKDIR '/app'
+
+COPY package.json .
+RUN npm install
+
+# For run docker file
+COPY . .
+
+CMD ["yarn", "start"]
